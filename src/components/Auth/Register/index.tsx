@@ -10,17 +10,55 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [isAdm, setIsAdm] = useState(false);
   const [isRegistering, setIsRegistering] = useState(false);
+  const [erro, setErro] = useState("");
 
   const { userLoggedIn } = useAuth();
 
+  const errorMessage = (error: any) => {
+    if (error === "Firebase: Error (auth/missing-email).") {
+      setErro("Preencha o email corretamente");
+
+      return;
+    }
+
+    if (error === "Firebase: Error (auth/missing-password).") {
+      setErro("Preencha a senha corretamente");
+
+      return;
+    }
+
+    if (error === "Firebase: Error (auth/invalid-email).") {
+      setErro("Preencha um email válido");
+
+      return;
+    }
+
+    if (error === "Firebase: Error (auth/email-already-in-use).") {
+      setErro("Este email já existe, use outro");
+
+      return;
+    }
+
+    setErro("Algo deu errado, por favor revise os dados e tente novamente");
+
+    return;
+  };
+
   const onSubmit = async (e: any) => {
+    if (!name) {
+      setErro("Coloque um nome");
+
+      return;
+    }
     e.preventDefault();
     if (!isRegistering) {
       setIsRegistering(true);
       try {
         await doCreateUserWithEmailAndPassword(email, password, name, isAdm);
       } catch (e: any) {
-        console.log("error: ", e);
+        errorMessage(e.message);
+      } finally {
+        setIsRegistering(false);
       }
     }
   };
@@ -80,6 +118,7 @@ const Register = () => {
           <button className="register-button" disabled={isRegistering}>
             {isRegistering ? "Cadastrando..." : "Cadastrar"}
           </button>
+          <p className="register-footer-error">{erro}</p>
           <div className="register-footer">
             <p>Você já tem uma conta?</p>
             <Link to="/">Acesse sua conta aqui</Link>

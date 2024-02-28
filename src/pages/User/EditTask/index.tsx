@@ -14,6 +14,7 @@ const EditTaskUser = () => {
   const [priorityFilter, setPriorityFilter] = useState("");
   const [situationFilter, setSituationFilter] = useState("");
   const [descriptionFilter, setDescriptionFilter] = useState("");
+  const [erro, setErro] = useState("");
 
   const getUser = async () => {
     if (!userLogged) {
@@ -34,7 +35,7 @@ const EditTaskUser = () => {
       await updateTask(userLogged.uid, newUserLogged);
       window.location.reload();
     } catch (e: any) {
-      console.log("Erro: ", e);
+      setErro(e.message);
     }
   };
 
@@ -51,7 +52,7 @@ const EditTaskUser = () => {
 
       window.location.reload();
     } catch (e: any) {
-      console.log("Erro: ", e);
+      setErro(e.message);
     }
   };
 
@@ -167,9 +168,11 @@ const EditTaskUser = () => {
                   <h5 onClick={() => toggleFinishing(t?.id)}>
                     Já iniciou a tarefa?
                   </h5>
+                  <p className="task-edit-error">{erro}</p>
                   <h5 onClick={() => toggleComplete(t?.id)}>
                     Já finalizou a tarefa?
                   </h5>
+                  <p className="task-edit-error">{erro}</p>
                   <button
                     className="task-edit-update"
                     onClick={() => navigate("/update-user", { state: { t } })}

@@ -14,6 +14,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSigningIn, setIsSigningIn] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const getUser = async () => {
     if (!userLogged) {
@@ -30,11 +31,6 @@ const Login = () => {
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
-    if (!email || !password) {
-      console.log("coloque email ou uma senha válida");
-
-      return;
-    }
     if (!isSigningIn) {
       setIsSigningIn(true);
       try {
@@ -42,12 +38,14 @@ const Login = () => {
         const { user } = getUser;
         const userLogged = await getUserDoc(user.uid);
         setUserLogged(userLogged);
+        setIsError(false);
         if (userLogged) {
           navigate("/home-user");
         }
       } catch (error: any) {
+        setIsError(true);
+      } finally {
         setIsSigningIn(false);
-        console.log("erro: ", error);
       }
     }
   };
@@ -86,6 +84,11 @@ const Login = () => {
           <button className="login-button" disabled={isSigningIn}>
             {isSigningIn ? "Entrando..." : "Entrar"}
           </button>
+          {isError && (
+            <p className="login-footer-error">
+              Credenciais inválidas, tente novamente.
+            </p>
+          )}
           <div className="login-footer">
             <p className="login-signUp">Você ainda não tem uma conta?</p>
             <Link className="login-signUp" to="/register">

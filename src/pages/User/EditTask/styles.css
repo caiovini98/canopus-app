@@ -94,6 +94,12 @@
     color: #FFFFFE;
 }
 
+.task-edit-error {
+    margin-top: 5px;
+    color: #ff6961;
+    font-size: 10px;
+}
+
 .task-edit-goback {
     color: #FFFFFE;
     align-self: flex-end;

@@ -15,6 +15,7 @@ import { Category } from "../../../module/category";
 const CategoryUser = () => {
   const [description, setDescription] = useState("");
   const [user, setUser] = useState<Category>();
+  const [erro, setErro] = useState("");
 
   const { userLogged, userLoggedIn, currentUser, setUserLogged } = useAuth();
 
@@ -57,16 +58,16 @@ const CategoryUser = () => {
         await updateCategory(userLogged.uid, updatedTask);
         window.location.reload();
       } catch (e: any) {
-        console.log("Erro: ", e);
+        setErro(e.message);
       }
     } else {
-      console.log("Essa descrição não existe ainda");
+      setErro("Essa descrição não existe ainda");
     }
   };
 
   const onSubmit = async () => {
     if (!description) {
-      console.log("Coloque algo");
+      setErro("Coloque uma descrição válida");
 
       return;
     }
@@ -80,7 +81,7 @@ const CategoryUser = () => {
       await addCategory(userLogged.uid, task);
       window.location.reload();
     } catch (e: any) {
-      console.log("Erro: ", e);
+      setErro(e.message);
     }
   };
 
@@ -99,6 +100,7 @@ const CategoryUser = () => {
         </div>
         <button onClick={onSubmit}>Adicionar</button>
         <button onClick={updateCategories}>Editar</button>
+        <p className="category-user-error">{erro}</p>
       </div>
       <div className="category-user-edit">
         <h2>Categorias cadastradas</h2>

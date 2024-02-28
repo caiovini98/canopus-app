@@ -104,3 +104,9 @@
     align-items: center;
     padding: 3px 2px;
 }
+
+.update-user-admin-error {
+    margin-top: 15px;
+    color: #ff6961;
+    font-size: 13px;
+}

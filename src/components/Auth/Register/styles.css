@@ -108,6 +108,12 @@
     color: #43EA80;
   }
 
+  .register-footer-error {
+    margin-top: 20px;
+    color: #ff6961;
+    font-size: 13px;
+  }
+
   .register-containerCheckbox {
     display: flex;
     align-items: center;
