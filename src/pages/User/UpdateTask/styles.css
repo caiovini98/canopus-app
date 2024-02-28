@@ -1,0 +1,106 @@
+.update-task-user-container {
+    padding: 20px 30px;
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.update-task-user-container h2 {
+    text-align: center;
+    color: #43EA80;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.update-task-user-box {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.update-task-user-select {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.update-task-user-box input {
+    width: 100%;
+    padding: 10px 0 10px 5px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #868686;
+    background-color: #080C1C;
+    color: #FFFFFE;
+}
+
+.update-task-user-label-title {
+    margin-top: 18px;
+    font-size: 16px;
+    color: #43EA80;
+}
+
+.update-task-user-button {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: #2196F3;
+    color: #FFFFFE;
+    margin-top: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.update-task-user-button-delete {
+    padding: 2px 4px;
+    border: none;
+    outline: none;
+    background-color: #080C1C;
+    color: #ff6961;
+    margin-top: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.update-task-user-button-goback {
+    color: #FFFFFE;
+    margin-top: 12px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.update-task-user-box-radio-group {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.update-task-user-li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFE;
+}
+
+.update-task-user-button-anotations {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px 0px;
+    color: #FFFFFE;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.update-task-user-box-radio-group label {
+    color: #4189e0;
+    font-family: "Poppins", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 2px;
+}

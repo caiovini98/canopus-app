@@ -1,0 +1,124 @@
+.register-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .register-container .register-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  
+  .register-container .register-header span {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 15px;
+    color: #43EA80;
+  }
+  
+  .register-container form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .register-container form .register-inputContainer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  .register-container form .register-inputContainer label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 8px;
+    color: #43EA80;
+  }
+  
+  .register-container form .register-inputContainer input {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    width: 520px;
+    height: 49px;
+    border: 1px solid #5C73DB;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  
+  }
+  
+  .register-container form a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #5C73DB;
+  }
+  
+  .register-container form .register-button {
+    width: 520px;
+    height: 48px;
+    background: #4763E4;
+    border-radius: 12px;
+    color: #FFFFFE;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .register-container form .register-button:hover {
+    cursor: pointer;
+    opacity: 0.register-8;
+  }
+  
+  .register-container form .register-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+  }
+  
+  .register-container form .register-footer p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFE;
+  }
+  
+  .register-container form .register-footer a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #43EA80;
+  }
+
+  .register-containerCheckbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 24px;
+    color: #43EA80;
+  }
+
+  .register-checkbox {
+    height: 25px;
+    width: 25px;
+  }
+
+  

@@ -1,0 +1,95 @@
+.task-user-container {
+    padding: 20px 30px;
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-user-container h2 {
+    text-align: center;
+    color: #43EA80;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.task-user-box {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.task-user-box input {
+    width: 100%;
+    padding: 10px 0 10px 5px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #868686;
+    background-color: #080C1C;
+    color: #FFFFFE;
+}
+
+.task-user-label-title {
+    margin-top: 18px;
+    font-size: 16px;
+    color: #43EA80;
+}
+
+.task-user-button {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: #2196F3;
+    color: #FFFFFE;
+    margin-top: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.task-user-button-goback {
+    color: #FFFFFE;
+    margin-top: 12px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.task-user-box-radio-group {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-user-li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFE;
+}
+
+.task-user-select {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.task-user-button-anotation {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px 0px;
+    color: #FFFFFE;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.task-user-box-radio-group label {
+    color: #FFFFFE;
+    font-family: "Poppins", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 2px;
+}

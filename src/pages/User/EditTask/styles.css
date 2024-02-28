@@ -1,0 +1,102 @@
+.task-edit-container {
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.task-edit-container h2 {
+    color: #43EA80;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.task-edit-filters {
+    display: flex;
+    justify-content: space-around;
+}
+
+.task-edit-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.task-edit-filter label {
+    margin-top: 15px;
+    color: #43EA80;
+}
+
+.task-edit-input-filter {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #868686;
+    background-color: #080C1C;
+    color: #FFFFFE;
+}
+
+
+.task-edit-container-card {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.task-edit-container-box {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+.concluida {
+    background-color: #90ee90;
+  }
+  
+  .iniciada {
+    background-color: #ADD8E6;
+  }
+  
+  .cancelada {
+    background-color: #ff6961;
+  }
+  
+  .pendente {
+    background-color: #FDFD96;
+  }
+
+.task-edit-container-box h3 {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #232323;
+}
+
+.task-edit-container-box h5 {
+    margin: 8px 0 0 0;
+    cursor: pointer;
+}
+
+.task-edit-update {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #2196F3;
+    color: #FFFFFE;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.task-user-li {
+    margin-top: 3px;
+    color: #FFFFFE;
+}
+
+.task-edit-goback {
+    color: #FFFFFE;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-left: 15px;
+}

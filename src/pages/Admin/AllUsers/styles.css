@@ -1,0 +1,103 @@
+.all-users-admin-container {
+    background-color: #FFFFFE;
+    padding: 20px 30px;
+    margin: 0px auto;
+    width: 400px;
+    text-align: center;
+}
+
+.all-users-admin-container h2 {
+    color: #43EA80;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.all-users-admin-box {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.all-users-admin-box input {
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #868686;
+}
+
+.all-users-admin-container button {
+    margin: 20px auto 0;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: #2196F3;
+    color: #FFFFFE;
+    cursor: pointer;
+    margin-left: 14px;
+}
+
+.all-users-admin-edit {
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.all-users-admin-edit h2 {
+    color: #43EA80;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.all-users-admin-container-edit {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.all-users-admin-box-edit {
+    padding: 10px 20px;
+    margin: 20px 20px 0 0;
+    background-color: #FFFFFE;
+    border-radius: 5px;
+
+}
+
+.all-users-admin-box-edit h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.all-users-admin-box-edit button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #FFFFFE;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.all-users-admin-li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #2196F3;
+    list-style-type: none;
+    gap: 40px;
+}
+
+.all-users-admin-goback {
+    color: #FFFFFE;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.all-users-admin-box-edit h5 {
+    margin-top: 12px;
+    color: #4189e0;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
