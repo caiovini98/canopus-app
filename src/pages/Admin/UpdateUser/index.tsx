@@ -28,6 +28,7 @@ const UpdateUserAdmin = () => {
   const [novoItem, setNovoItem] = useState("");
   const [nextId, setNextId] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [erro, setErro] = useState("");
 
   const navigate = useNavigate();
 
@@ -57,7 +58,7 @@ const UpdateUserAdmin = () => {
 
   const onSubmit = async () => {
     if (!description || !category) {
-      console.log("Coloque algo");
+      setErro("Coloque uma descrição ou categoria válida");
 
       return;
     }
@@ -85,7 +86,7 @@ const UpdateUserAdmin = () => {
       navigate("/all-users-adm");
       window.location.reload();
     } catch (e: any) {
-      console.log("Erro: ", e);
+      setErro(e.message);
     } finally {
       setLoading(false);
     }
@@ -259,6 +260,7 @@ const UpdateUserAdmin = () => {
       >
         Editar
       </button>
+      <p className="update-user-admin-error">{erro}</p>
       <button
         disabled={loading}
         onClick={excluirTask}

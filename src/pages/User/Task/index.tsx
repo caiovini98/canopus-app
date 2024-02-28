@@ -20,6 +20,7 @@ const TaskUser = () => {
   const [newItem, setNewItem] = useState("");
   const [nextId, setNextId] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [erro, setErro] = useState("");
 
   const { userLogged } = useAuth();
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ const TaskUser = () => {
 
   const onSubmit = async () => {
     if (!description || !category) {
-      console.log("Coloque algo");
+      setErro("Coloque uma descrição e/ou categoria");
 
       return;
     }
@@ -71,7 +72,7 @@ const TaskUser = () => {
       navigate("/home-user");
       window.location.reload();
     } catch (e: any) {
-      console.log("Erro: ", e);
+      setErro(e.message);
     } finally {
       setLoading(false);
     }
@@ -228,6 +229,7 @@ const TaskUser = () => {
           Adicionar anotação
         </button>
       </div>
+      <p className="task-user-error">{erro}</p>
       <button
         disabled={loading}
         onClick={onSubmit}

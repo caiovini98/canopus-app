@@ -27,6 +27,7 @@ const UpdateTaskUser = () => {
   const [novoItem, setNovoItem] = useState("");
   const [nextId, setNextId] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [erro, setErro] = useState("");
 
   const { userLogged } = useAuth();
   const navigate = useNavigate();
@@ -57,7 +58,7 @@ const UpdateTaskUser = () => {
 
   const onSubmit = async () => {
     if (!description || !category) {
-      console.log("Coloque algo");
+      setErro("Atualize uma descrição e/ou categoria válida");
 
       return;
     }
@@ -85,7 +86,7 @@ const UpdateTaskUser = () => {
       navigate("/home-user");
       window.location.reload();
     } catch (e: any) {
-      console.log("Erro: ", e);
+      setErro(e.message);
     } finally {
       setLoading(false);
     }
@@ -254,6 +255,7 @@ const UpdateTaskUser = () => {
           Adicionar anotação
         </button>
       </div>
+      <p className="update-task-error">{erro}</p>
       <button
         disabled={loading}
         onClick={onSubmit}

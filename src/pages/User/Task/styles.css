@@ -86,6 +86,12 @@
     text-decoration: underline;
 }
 
+.task-user-error {
+    margin-top: 20px;
+    color: #ff6961;
+    font-size: 13px;
+}
+
 .task-user-box-radio-group label {
     color: #FFFFFE;
     font-family: "Poppins", sans-serif;

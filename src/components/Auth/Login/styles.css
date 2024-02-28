@@ -93,6 +93,12 @@
     justify-content: center;
     gap: 10px;
   }
+
+  .login-footer-error {
+    margin-top: 20px;
+    color: #ff6961;
+    font-size: 13px;
+  }
   
   .login-signUp {
     color: #FFFFFE;
