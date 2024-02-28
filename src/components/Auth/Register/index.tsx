@@ -14,7 +14,7 @@ const Register = () => {
 
   const { userLoggedIn } = useAuth();
 
-  const errorMessage = (error: any) => {
+  const errorMessage = (error: string) => {
     if (error === "Firebase: Error (auth/missing-email).") {
       setErro("Preencha o email corretamente");
 
