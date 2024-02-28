@@ -1,5 +1,5 @@
-# Sencon
-Olá, este é um projeto em resposta ao desafio técnico proposto pela Sencon, na qual consiste em criar usuários, tanto usuário normal quanto administrador, e o usuário pode criar, excluir, suas tarefas. Para o administrador, ele pode criar suas tarefas e administrar as dos usuários.
+# Canopus APP
+Olá, este é um projeto em resposta ao desafio técnico proposto pela Canopus, na qual consiste em criar usuários, tanto usuário normal quanto administrador, e o usuário pode criar, excluir, suas tarefas. Para o administrador, ele pode criar suas tarefas e administrar as dos usuários.
 
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
